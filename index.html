@@ -1,23 +1,24 @@
 <!doctype html>
 <html>
-  <head><meta charset="utf-8"><title>Injection Test</title></head>
-  <body>
-    <p>
-    This is a controlled diff demo page for the Yureeka pipeline. It exists only to validate that URL injection,
-    fetching, deterministic number extraction, and Diff Panel V2 all work end-to-end. The statements below are
-    intentionally simple and written in plain text so the scraper and extractor can reliably detect values, units,
-    and nearby semantic cues like “global”, “sales”, “market share”, and forecast horizons.
-    </p>
-    
-    <p>
-    Global EV sales in 2024 were 22.1M units. 
-    EV share of the light-vehicle market in 2024 was 22.0%.
-    Global EV sales are projected to reach 40.7 million units by 2030, representing a 42% market share.
-    </p>
-    
-    <p>
-    For a diff test, change only ONE number between runs (for example, change “18.5” to “20.0”) while keeping
-    the rest of the text the same. Do not remove text, and keep the units the same (“million units”).
-    </p>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <title>Injection Test Page</title>
+</head>
+<body>
+  <h1>Injected Metrics (for Evolution Current)</h1>
+
+  <p><strong>Global EV sales (2024):</strong> 18.5 million units</p>
+  <p><strong>EV market share (2024):</strong> 20.0%</p>
+
+  <p><strong>Global EV sales (2030 projection):</strong> 31.0 million units</p>
+  <p><strong>EV market share (2030 projection):</strong> 44.0%</p>
+
+  <p><strong>EV revenue (2026):</strong> US$ 1050.0 billion</p>
+
+  <!-- Optional: include extra context words that help canonical binding -->
+  <p style="display:none">
+    global sales market share units revenue projected projection
+  </p>
+</body>
 </html>
+
